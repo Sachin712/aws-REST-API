@@ -24,4 +24,5 @@ functions:
     name: hello
     events:
       -http:
-          method: GET
+        path: hello
+        method: GET
