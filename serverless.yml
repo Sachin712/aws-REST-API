@@ -23,6 +23,6 @@ functions:
     handler: src/handler.hello
     name: hello
     events:
-      -http:
+      - http:
           path: hello
           method: GET
