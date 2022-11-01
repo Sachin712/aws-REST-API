@@ -51,7 +51,7 @@ plugins:
 resources:
   Resources:
     # SNS Topics
-    SNSHelloEvent:
+    SNSQuestionEvent:
       Type: AWS::SNS::Topic
       Properties:
         DisplayName: Question Event Topic
