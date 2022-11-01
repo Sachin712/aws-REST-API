@@ -30,7 +30,7 @@ functions:
   temp:
     handler: src/handler.temp
     name: temp
-    ecents:
+    events:
       - http:
           path: temp
           method: GET
