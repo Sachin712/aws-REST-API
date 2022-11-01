@@ -37,11 +37,11 @@ functions:
 
   question:
     handler: src/question.handler
-    dependsOn: SNSHelloEvent
+    dependsOn: SNSQuestionEvent
     events:
       - sns:
-          arn: !Ref SNSHelloEvent
-          topicName: hello-event
+          arn: !Ref SNSQuestionEvent
+          topicName: question-event
 
 # Serverless plugins
 plugins:
