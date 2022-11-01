@@ -35,3 +35,25 @@ functions:
           path: temp
           method: GET
 
+  question:
+    handler: src/question.handler
+    dependsOn: SNSHelloEvent
+    events:
+      - sns:
+          arn: !Ref SNSHelloEvent
+          topicName: hello-event
+
+# Serverless plugins
+plugins:
+  - serverless-plugin-typescript
+
+# Resources your functions use
+resources:
+  Resources:
+    # SNS Topics
+    SNSHelloEvent:
+      Type: AWS::SNS::Topic
+      Properties:
+        DisplayName: Question Event Topic
+        TopicName: question-event
+
