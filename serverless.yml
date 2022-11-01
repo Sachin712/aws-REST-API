@@ -28,7 +28,7 @@ functions:
           method: GET
 
   temp:
-    handler: src/handler.temp
+    handler: src/temp.handler
     name: temp
     events:
       - http:
