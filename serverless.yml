@@ -26,3 +26,12 @@ functions:
       - http:
           path: hello
           method: GET
+
+  temp:
+    handler: src/handler.temp
+    name: temp
+    ecents:
+      - http:
+          path: temp
+          method: GET
+
